@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>dog image</title>
+</head>
+<body>
+{% block content %}
+
+    {% for dog in dog_images %}
+        <!-- 가운데 정렬 완료 -->
+        <h1 align="center"> {{ dog.name }} </h1>
+
+        <!-- 사이즈 조절, 모양 만들기 및 가운데 정렬 필요 -->
+        <div><img src="{{ dog.dog_image.url }}" class="img-responsive" style="width: 30%; margin-left: 35%;" /></div>
+    {% endfor %}
+
+<div align="center"><a href="process"><input type="button" value="분석하기 -> "></a></div>
+
+
+    <!-- 이미지 파일 처리하는 과정으로 전환. View.py 활용 -->
+{% endblock %}
+
+</body>
+</html>
