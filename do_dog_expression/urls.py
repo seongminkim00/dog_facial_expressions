@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('imgupload.urls')),
+    path('', include('single_pages.urls')),
     path('image_upload/', include('imgupload.urls')),
-    #process 경로. 마지막에 추가하기
     path('image_upload/dog_image/process', include('imgupload.urls1')),
     path('admin/', admin.site.urls),
 ]
